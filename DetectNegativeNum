@@ -1,0 +1,22 @@
+#!/bin/bash
+
+read -p "Please enter a num :" NUMBER
+
+REGEX='^[0-9]+$'
+
+if ! [[ $NUMBER =~ $REGEX ]]
+  then
+  echo "Input is not a number" 
+
+elif [ $NUMBER = 0 ]  
+ then 
+    echo "It's not even niether odd"
+
+elif (( $NUMBER % 2 == 0 ));
+    then
+        echo "this is even"
+
+else
+        echo "this is odd"
+fi 
+
