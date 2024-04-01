@@ -1,0 +1,12 @@
+#!/bin/bash
+
+read -p "Please enter a num" NUM
+
+table()
+{
+    for i in [1..10]; do
+     echo $(($1 * $NUM))
+    done
+}
+
+table $NUM
