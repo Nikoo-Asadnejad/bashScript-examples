@@ -1,22 +1,33 @@
 #!/bin/bash
 
-read -p "Please enter a num" NUM
+read -p "Please enter a num : " NUM
 
 isPrime()
 {
 
-if [[ $1 == 1 || $1 == 2]]
+if [[ $1 == 1 || $1 == 2 ]]
  then
     echo "Prime"
 fi
 
+ISPRIME=1
+
 for (( i = 2; i <= $1/2; i++ ))  do
 
-    if [[ $1 != $i &&  $(($1 % $i)) == 0]]
+    if (( $1 % $i  == 0 ))
       then
-        exit
-    fi  
+        $ISPRIME = 0
+        break
+    fi
+
 done
+
+if [[ $ISPRIME == 1 ]]
+then
+   echo "num is prime"
+else
+   echo "num is not prime"
+fi                                                                 16,0-1        Top
 
 }
 
