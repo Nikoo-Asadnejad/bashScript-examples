@@ -5,7 +5,7 @@ read -p "Please enter a num" NUM
 table()
 {
     for i in [1..10]; do
-     echo $(($1 * $NUM))
+     echo $(($1 * $i))
     done
 }
 
